@@ -14,26 +14,34 @@ lP = length(Player);
 % Check Dealer's card
 for i = 1:lD
     if Dealer(i) == 1
-        if sumD+Ace > 21
-            sumD = sumD + 1;
-        else
-            sumD = sumD + Ace;
-        end
+        sumD = sumD + Ace;
     else
         sumD = sumD + Dealer(i);
+    end
+end
+
+if sumD > 21
+    for i = 1:lD
+        if Dealer(i) == 1 && sumD > 21
+            sumD = sumD - 10;
+        end
     end
 end
 
 % Check Player's card
 for i = 1:lP
     if Player(i) == 1
-        if sumP+Ace > 21
-            sumP = sumP + 1;
-        else
-            sumP = sumP + Ace;
-        end
+        sumP = sumP + Ace;
     else
         sumP = sumP + Player(i);
+    end
+end
+
+if sumP > 21
+    for i = 1:lP
+        if Player(i) == 1 && sumP > 21
+            sumP = sumP - 10;
+        end
     end
 end
 
