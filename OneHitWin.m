@@ -8,7 +8,13 @@ function prob = OneHitWin(Dealer, Player)
 Card = CardRemain(Dealer, Player);
 
 % Dealer needs to hit a card so that sumD>=sumP and sumD<21
-Cmax = 21 - sumD;
+
+Cmax = 10;
+while sum1(1)+Cmax > 21
+    Cmax = Cmax - 1;
+    sum1 = CardValue([Dealer,Cmax],Player);
+end
+
 Cmin = sumP - sumD; 
 
 prob = sum(Card(Cmin:Cmax))/sum(Card);
