@@ -1,23 +1,31 @@
 # Blackjack
 in Matlab
 
-## Main function : Probability 
+## Main function : Prob = Probability(Dealer, Player)
 Compute the winning probability of player after he/she stand. \
-Input: two vectors containing dealer's cards and player's cards, respectively.
+Input: two vectors storing dealer's and player's cards information, respectively.
 Output: probability
 
 The functions called: 
-## 1. CardRemain
-Input: two vectors containing dealer's cards and player's cards, respectively.\
+## 1. Card = CardRemain(Dealer,Player)
+Input: two vectors storing dealer's and player's cards information, respectively.\
 Output: a vector of 10 entries, each entry represents the number of one type of card remaining.\
 Ace is denoted as 1;\
 10/J/Q/K are denoted as 10.\
 6 decks are used, so 6\*52=312 cards in total.
 
-## 2. CardValue
-Input: tow vectors containing dealer's cards and player's cards, respectively.\
+## 2. \[sumD,sumP\] = CardValue(Dealer,Player)
+Input: two vectors storing dealer's and player's cards information, respectively.\
 Output: a vector of 2 entries representing dealer's card value and player's card value, respectively.\
 We assume the value of Ace is the largest possible value it could pick up,\
 i.e., if Ace can be value of 11, it will not counted as 1.
 
-## 3. GetCardProb
+## 3. prob = GetCardProb(Dealer,Player,X)
+Input: two vectors storing dealer's and player's cards information, respectively; and the card to be drawn.\
+Output: the probability of card X being drawn.
+
+## 4. prob = OneHitWin(Dealer, Player)
+Input: two vectors storing dealer's and player's cards information, respectively.\
+Output: the probability of dealer winning the game or push with only one hit.\
+Dealer will stand when his/her card value is greater or equal to 17, will burst when the card value is greater than 21.\
+Assume dealer does not have blackjack.\
