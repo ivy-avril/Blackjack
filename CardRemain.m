@@ -26,3 +26,6 @@ for i = 1:10
 end
 
 end
+
+
+% The cards might be negative, need to check before call.
