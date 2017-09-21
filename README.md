@@ -29,7 +29,7 @@ Input: two vectors storing dealer's and player's cards information, respectively
 Output: the probability of dealer winning the game or push with only one hit.\
 Dealer will stand when his/her card value is greater or equal to 17, will burst when the card value is greater than 21.\
 Assume dealer does not have blackjack.\
-[The case where dealer has an Ace needs to be solved.]
+*The case where dealer has an Ace needs to be solved.*
 
 ## 5. H = GetHits(Pre,i)
 Input: Pre: The value needs to be obtained before hitting 17;\
