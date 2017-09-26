@@ -35,3 +35,5 @@ Assume dealer does not have blackjack.\
 Input: Pre: The value needs to be obtained before hitting 17;\
        i: Number of hits before hitting 17.\
 Output: a matrix with i columns, containing all the possible cases where dealer can hit i times without hitting 17.
+
+TBC
